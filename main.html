@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Brainster Space</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is my first project" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      @media all and (-ms-high-contrast:none)
+       {
+       .foo { color: green } /* IE10 */
+       *::-ms-backdrop, .foo { color: red } /* IE11 */
+       }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel = "stylesheet"    href = "style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+
+
+    <nav class=" myNav navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="main.html">
+        <img src="./assets/img/logo.svg">
+      </a>
+      <div class="forTablet">
+        <button class="navButton-style buttonShowTablet" data-toggle="modal" data-target="#exampleModalLogIn">+ Приклучи Се</button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
+          <span class="navbar-toogler">   
+            <i class="fa fa-bars fa-bars"></i>
+          </span>
+        </button>
+      </div>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navUl navUlflex li">
+          <li class="nav-item">
+            <a  id="spaceBlog-link"  class="nav-link" href="SpaceBlog.html">Space Blog<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">Настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Co-working</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="akademii.html">Академии</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventspace.html">Простор за настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Партнерства</a>
+          </li>
+        </ul>
+        <button  type="button" class="only-for-spaceMobile" data-toggle="modal" data-target="#exampleModalLogIn">+ Приклучи се</button>
+        <form class="form hideForMobile my-2 my-lg-0">
+          <button type="button" class="navButton-style buttonShowForMobile" data-toggle="modal" data-target="#exampleModalLogIn">
+            + Приклучи се
+          </button>
+        </form>
+      </div>
+      <form class="form buttonForTablet my-2 my-lg-0">
+        <button type="button" class="reverse-navButton-style" data-toggle="modal" data-target="#exampleModalLogIn">
+          + Приклучи се
+        </button>
+      </form>
+    </nav>
+
+    <!-- Modal -->
+<!-- 
+    Modal for приклучи се button -->
+
+    
+    <div class="modal fade" id="exampleModalLogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Приклучи се</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body myModal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Име и презиме</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="Внеси Име и Презиме"required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете име и презиме
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Внесете е-маил</label>
+                  <input type="email" class="form-control" id="validationCustom03" placeholder="Внесете е-маил" required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете e-maил
+                  </div>
+                </div>
+              </div>
+              <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for the first card -->
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Приклучи се</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body myModal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Име и презиме</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="Внеси Име и Презиме(задолжително)"required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете име и презиме
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom02">Име на фирмата</label>
+                  <input type="text" class="form-control" id="validationCustom02" placeholder="Име на фирмата(незадолжително)">  
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Телефонски број</label>
+                  <input type="number" class="form-control" id="validationCustom03" placeholder="Внесете телефонски број" required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете телефонски број
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Предлог за соработка(незадолжително)</label>
+                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom01" placeholder="Во 300 карактери, објаснете зошто сакате да соработуваме" required>
+                </div>
+              </div>
+              <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
+              <button type="button" class="button-close" data-dismiss="modal">Исклучи</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for the other card -->
+
+    <div class="modal fade" id="exampleModalOtherCard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Приклучи се</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body myModal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Име и презиме</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="Внеси Име и Презиме"required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете име и презиме
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom02">Име на компанија</label>
+                  <input type="text" class="form-control" id="validationCustom02" placeholder="Име на фирмата"required>  
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Е-маил</label>
+                  <input type='email' class="form-control" id="validationCustom03" placeholder="Внесете го вашиот е-маил" required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете е-маил
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Телефонски број</label>
+                  <input type="number" class="form-control" id="validationCustom03" placeholder="Внесете телефонски број">
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете телефонски број
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Потреби на компанијата</label>
+                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom01" placeholder="Ве молам, на кратко објаснете ги потребите на компанијата" required>
+                </div>
+              </div>
+              <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
+              <button type="button" class="button-close" data-dismiss="modal">Исклучи</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid myContainer-fluid">
+      <div class="row main-picture">
+        <div class=" col-lg-12 col-md-12 col-sm-12 overlay">
+          <div class="intro-content text-center">
+            <p>Центар за учење, кариера и иновација</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 'for-us' -->
+      <div class="content-wrapper">
+        <h1 class="desc-heading">За Нас</h1>
+
+        <div class="main-card-wrapper">
+          <a href ="http://brainster.co" target="blank">
+            <div class="main-card mt-3">
+              <div class="img-hover-zoom img-hover-zoom--slowmo ">
+                <img class="main-card-img main-card-img-1" />
+              </div>
+            <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Едукација</h3>
+                <p>
+                  Научи практични вештини за трансформација во кариерата.Нашата
+                  специјалност е да ти помогнеме да го најдеш правилниот skill
+                  set кој ќе одговори на реалните потреби на пазарот на
+                  труд. Организираме курсеви, академии и персонални обуки.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3">
+          <a href="calendar.html" target="blank">
+          <div class="img-hover-zoom img-hover-zoom--slowmo ">
+            <img class="main-card-img main-card-img-2 " />
+          </div>
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Настани</h3>
+                <p>
+                  Специјално курирани и организирани настани кои ги поврзуваат
+                  правите таленти со иновативните компании.Идејата е да нашата
+                  tech заедница расте, се инспирира и креира преку овие настани.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3">
+          <a href ="#">
+          <div class="img-hover-zoom img-hover-zoom--slowmo "> 
+            <img class="main-card-img main-card-img-3 " />
+          </div>
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Coworking</h3>
+                <p>
+                  Научи практични вештини за трансформација во кариерата.Нашата
+                  специјалност е да ти помогнеме да го најдеш правилниот skill
+                  set кој ќе одговори на реалните потреби на пазарот на
+                  труд. Организираме курсеви, академии и персонални обуки.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+     
+        <div class="main-card mt-3">
+          <a href="eventspace.html" target="blank">
+          <div class="img-hover-zoom img-hover-zoom--slowmo "> 
+            <img class="main-card-img main-card-img-4" />
+          </div>
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Простор за настани</h3>
+                <p>
+                  Имаш идеја за обука или настан од tech областа? Ние имаме
+                  простор за реализација.Нашиот тим внимателно ги одбира и
+                  курира сите настани.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3">
+          <a href ="#" data-toggle="modal" data-target="#exampleModal">
+          <div class="img-hover-zoom img-hover-zoom--slowmo "> 
+            <img class="main-card-img main-card-img-5" />
+          </div>
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Партнерства со tech компании</h3>
+                <p>
+                  Целта и идејата е креирање на tech заедница која ќе се негува,
+                  расте и креира подобро утро за сите нас.Преку директно и
+                  индиректно поврзување на tech талентите со компаниите.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3">
+          <a href ="#" data-toggle="modal" data-target="#exampleModalOtherCard">
+          <div class="img-hover-zoom img-hover-zoom--slowmo "> 
+            <img class="main-card-img main-card-img-6" />
+          </div>
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Иновации за компании</h3>
+                <p>
+                  Нов концепт кој ќе им помогне на компаниите да премнат од
+                  стариот во новиот начин на работење.Подгответе ја вашата
+                  компанија за дигитална трансформација.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+      <!-- section for еducation -->
+
+      <div id="EducationLink"class="sections mt-3 showEducation">
+        <div class="desc-wrapper">
+          <div class="desc-width">
+            <h1 class="company-heading mb-3">Едукација</h1>
+            <p>
+              Дали си подготвен да одговориш на потребите на иднината. Вистинските курсеви, академии и семинари ќе ти овозможат кариерна трансформација во овласта на дигитален маркетинг, дизајн, програмирање и Data Science.
+            </p>
+            <br />
+            <div class="company-buttons">
+              <a href="#EducationLink">
+              <button class="reverse-NavButton-style button-Akademii">Академии</button>
+              </a>
+              <a href="#CompanyLink">
+              <button class="navButton-style button-style-1 button-zaKompanii">
+                За компании
+              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="company-wrapper">
+          <div class="desc-width">
+            <img src="./assets/img/zanas/edukacija1.jpg" class="img-fluid company-img" />
+          </div>
+        </div>
+      </div>
+
+      <div id="CompanyLink" class="sections mt-3 showCompanies">
+        <div class="desc-wrapper">
+          <div class="desc-width">
+            <h1 class="company-heading mb-3">Компании</h1>
+            <p>
+             Компаниите имаат можност да ги надоградат своите тимови, а со тоа да го подобрат својот перформанс на компанијата.
+            </p>
+            <p>
+            Дигиталната трансформација се случува, а вашите фирми треба да бидат подготвени за тоа.Обуки, семинари, курсеви и team building.
+            </p>
+            <p>
+            Brainster Space има посебен тим кој е специјализиран за да ги оствари потребите на вашата компанија.
+            </p>
+            <br />
+            <div class="company-buttons">
+              <a href="#EducationLink">
+              <button class="reverse-NavButton-style button-Akademii">Академии</button>
+              </a>
+              <a href="#CompanyLink">
+              <button class="navButton-style button-style-1 button-zaKompanii">
+                За компании
+              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="company-wrapper">
+          <div class="desc-width">
+            <img src="./assets/img/zanas/companies.jpg" class="img-fluid company-img" />
+          </div>
+        </div>
+      </div>
+
+      <!-- section for events -->
+
+      <h1 class="desc-heading desc-heading-events">Настани</h1>
+
+      <div class="main-card-wrapper">
+
+        <div class="main-card mt-3">
+          <a href='#'>
+          <img class="main-card-img main-card-img-7 " />
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Codeworkes</h3>
+                <p>
+                  Вистинскиот настан за сите tech таленти кои сакаат да кодираат
+                  и да научат што е ново во tech заедницата.Настан кој ги
+                  поврзува mid programerite со IT компаниите. Deep Dive
+                  Intensive Seminar Ексклузивни семинари кои комбинираат три
+                  техники на учење.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3">
+          <a href ="#">
+          <img class="main-card-img main-card-img-8 " />
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Deep Dive into Marketing</h3>
+                <p>
+                  Deep Dive into Marketing се серија од интензивни семинари кои
+                  се наменски подготвени да ти помогнат да ги совладаш и
+                  предвидиш современите промени, предизвици и идните трендови во
+                  областа на маркетингот.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div class="main-card main-card-wrap mt-3">
+          <a href="#">
+          <img class="main-card-img main-card-img-9 " />
+          <div class="main-card-desc-wrapper">
+            <div class="main-card-div">
+              <div class="main-card-desc">
+                <h3 class="main-card-heading">Deep Dive into Data Science</h3>
+                <p>
+                  Deep Dive into Data Science се серија од интензивни семинари
+                  кои се наменски подготвени да ти помогнат да ги совладаш и
+                  предвидиш современите промени, предизвици и идните трендови во
+                  областа на Data Science.
+                </p>
+              </div>
+              <img
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- section for coworking -->
+
+      
+        <div class="calendar-button-div-width">
+          <a href = "calendar.html" class="href-IE">
+            <button class="navButton-style button-style-1 button-calendar">
+              <i class="fa fa-calendar"></i>
+              Календар на настани
+            </button>
+          </a>
+        </div>
+        <div class="mt-5 sections">
+
+        <div class="reverse-forTablet">
+        <div class="company-wrapper  company-wrapper-overflow">
+          <div class="desc-width">
+          <img src="./assets/img/zanas/coworking.jpg" class="img-fluid company-img" />
+          </div>
+        </div>
+        <div class="desc-wrapper coworking-padding-0">
+          <div class="desc-width">
+            <button class="button-sold-out reverse-NavButton-style">
+              Sold out
+            </button>
+            <h1 class="company-heading coworking-heading mb-3">Coworking</h1>
+            <p class="line-throught-paragraph">
+              Биди дел од tech заедницата на иноватори, креативци и
+              претприемачи. Резервирај стол во нашата shared office.Пичирај го
+              твојот бизнис и нашиот тим заедно ќе одлучи секој месец со кого да
+              ги дели канцелариите.
+            </p>
+            <br />
+            <div class="company-buttons book-button">
+              <button
+                class="navButton-style button-style-1 coworkers-button-textdecoration"
+              >
+                Резервирај место
+              </button>
+            </div>
+            <h4 class="sold-out-heading">Местата се распродадени</h4>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- 
+      Space for events -->
+
+      <div class="row mt-3">
+        <div class="desc-wrapper">
+          <div class="desc-width desc-width-nastani">
+            <a href="eventspace.html">
+            <h1 class="company-heading mb-3">Простор за настани</h1>
+            </a>
+            <p>
+              Можност за презентации, обуки, конференции, networking
+              настани.Одбери ја просторијата која најмогу ќе одговара на твојата
+              идеја.Го задржуваме правото да одбереме кој настан ќе се
+              организира во нашиот Brainster Space.
+            </p>
+            <br />
+            <div class="company-buttons">
+              <a href="eventspace.html">
+                <button class="navButton-style button-style-1 space-button">
+                  <i class="fa fa-arrow-right"></i>
+                  Види го просторот
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="company-wrapper">
+          <div class="desc-width">
+          <img
+            src="./assets/img/zanas/prostorzanastani.jpg"
+            class="img-fluid company-img"
+          />
+        </div>
+        </div>
+      </div>
+    </div>
+      <!-- ideas for Partners  -->
+
+    <div class="row">
+      <div class="ideas-wrapper">
+        <h1 class="text-center space-heading">Партнери</h1>
+        <p class="text-center space-paragraph">
+          Имаш идеа? Отворени сме за соработка
+        </p>
+        <a href="eventspace.html" class="a-forIE">
+          <button class="navButton-style button-style-1 space-button">
+            <i class="fa fa-arrow-right"></i>
+            Види го просторот
+          </button>
+        </a>
+      </div>
+    </div>
+   </div>
+      <!-- 
+      Socials -->
+
+      <div class="row social-wrapper">
+        <div class="social-links">
+          <ul class="ul-social">
+            <li><a href="#"><strong>Корисни линкови</strong></a></li>
+            <li><div id ="contact" data-toggle="popover" data-content="Емаил: anja@brainster.co контакт-телефон: 070 233 414" >Контакт</div></li>
+            <li><a href="https://wearelaika.com" target="blank">Отворени позиции</a></li>
+            <li><a href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152" target="blank">Галерија</a></li>
+            <li><a href="calendar.html">Календар</a></li>
+          </ul>
+          <div class="social-links-logos">
+            <h6><strong>Социјални мрежи</strong></h6>
+              <ul class="list-unstyled social">
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="./assets/img/zanas/facebook.jpg" class="social-links-fluid"></a></li>
+                <li><a href="https://www.snapchat.com/" target="_blank"><img src="./assets/img/zanas/linke.png" class="social-links-fluid"></a></li>
+                <li><a href="https://www.pinterest.com/" target="_blank"><img src="./assets/img/zanas/insta.jpg" class="social-links-fluid"></a></li>
+              </ul>
+          </div>
+        </div>
+          <img src="./assets/img/logo.svg" class="logo-social">
+      </div>
+      <footer class='row'>
+        <p>Copyright&copyStudents, BrainsterSpace</p>
+      </footer>
+    </div>
+    
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

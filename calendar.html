@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Brainster Space</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is my first project" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/calendar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="myNav navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="main.html">
+        <img src="./assets/img/logo.svg" />
+      </a>
+      <div class="forTablet">
+        <button
+          class="navButton-style buttonShowTablet"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи Се
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toogler">
+            <i class="fa fa-bars fa-bars"></i>
+          </span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navUl navUlflex li">
+          <li class="nav-item">
+            <a id="spaceBlog-link" class="nav-link" href="SpaceBlog.html"
+              >Space Blog<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="calendar.html">Настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Co-working</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="akademii.html">Академии</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventspace.html">Простор за настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Партнерства</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="only-for-spaceMobile"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи се
+        </button>
+        <form class="form my-2 my-lg-0">
+          <button
+            type="button"
+            class="navButton-style buttonShowForMobile"
+            data-toggle="modal"
+            data-target="#exampleModalLogIn"
+          >
+            + Приклучи се
+          </button>
+        </form>
+      </div>
+      <form class="form buttonForTablet my-2 my-lg-0">
+        <button
+          type="button"
+          class="navButton-style buttonShowForMobile"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи се
+        </button>
+      </form>
+    </nav>
+
+    <!-- 
+    Modal for приклучи се button -->
+  
+    <div class="modal fade" id="exampleModalLogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Приклучи се</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body myModal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Име и презиме</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="Внеси Име и Презиме"required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете име и презиме
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+              </div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Внесете е-маил</label>
+                  <input type="email" class="form-control" id="validationCustom03" placeholder="Внесете е-маил" required>
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете e-maил
+                  </div>
+                </div>
+              </div>
+              <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid myContainer-fluid">
+      <div class="row">
+        <div class="calendar-wrapper">
+          <div class="calendar-header">
+            <h1>Календар</h1>
+            <div class="monthAndYear-div">
+              <img
+                id="next"
+                onclick="previous();return false;"
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow-prev.png"
+              />
+              <h6 id="monthAndYear"></h6>
+              <img
+                id="next"
+                onclick="next();return false;"
+                class="main-card-circle-arrows"
+                src="./assets/img/zanas/circle-arrow.png"
+              />
+            </div>
+          </div>
+          <table class="tableCalendar" id="calendar">
+            <thead>
+              <tr>
+                <th>НЕД</th>
+                <th>ПОН</th>
+                <th>ВТО</th>
+                <th>СРЕ</th>
+                <th>ЧЕТ</th>
+                <th>ПЕТ</th>
+                <th>САБ</th>
+              </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row CalendarDivWrapper-forTablet">
+        <h3>Следни настани</h3>
+        <div class="calendarDiv-forTablet">
+          <div class="calendarDates"></div>
+          <div class="calendarEventsDataScience"></div>
+          <div class="calendarMarketing"></div>
+        </div>
+      </div>
+
+      <!-- 
+      Socials -->
+
+      <div class="row social-wrapper">
+        <div class="social-links">
+          <ul class="ul-social">
+            <li><a href="#"><strong>Корисни линкови</strong></a></li>
+            <li><div id ="contact" data-toggle="popover" data-content="Емаил: anja@brainster.co контакт-телефон: 070 233 414" >Контакт</div></li>
+            <li><a href="https://wearelaika.com" target="blank">Отворени позиции</a></li>
+            <li><a href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152" target="blank">Галерија</a></li>
+            <li><a href="calendar.html">Календар</a></li>
+          </ul>
+          <div class="social-links-logos">
+            <h6><strong>Социјални мрежи</strong></h6>
+            <ul class="list-unstyled social">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img src="./assets/img/zanas/facebook.jpg" class="social-links-fluid"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.snapchat.com/" target="_blank"
+                  ><img src="./assets/img/zanas/linke.png" class="social-links-fluid"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/" target="_blank"
+                  ><img src="./assets/img/zanas/insta.jpg" class="social-links-fluid"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="./assets/img/logo.svg" class="logo-social" />
+      </div>
+      <footer class="row">
+        <p>Copyright&copyStudents; BrainsterSpace</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/calendar.js"></script>
+  </body>
+</html>

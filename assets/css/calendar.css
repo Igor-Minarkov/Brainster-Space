@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+}
+.calendar-wrapper {
+  padding: 30px 65px;
+  width: 100%;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+.calendar-header h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+}
+.monthAndYear-div {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+#monthAndYear {
+  text-align: center;
+  margin: 0;
+  vertical-align: center;
+  font-weight: bold;
+  margin: 0 25px;
+  font-size: 25px;
+}
+.tableCalendar {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 15px;
+}
+.tableCalendar th {
+  text-align: right;
+  vertical-align: bottom;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.tableCalendar td {
+  font-size: 30px;
+  font-weight: bold;
+  vertical-align: bottom;
+  text-align: right;
+  background-color: #f3f3f3;
+  height: 105px;
+  width: 14.283%;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.eventDiv-css {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 7px;
+  width: 100%;
+}
+.eventDiv-css p {
+  text-align: left;
+  font-size: 11px;
+  margin: 0 !important;
+  padding: 1px 0;
+}
+.eventDiv-css h6 {
+  font-size: 9px;
+  margin: 0 !important;
+  padding: 1px 0;
+}
+.CalendarDivWrapper-forTablet {
+  display: none;
+}
+
+@media only screen and (max-width: 993px) {
+  .eventDiv-css {
+    display: none;
+  }
+  .tableCalendar {
+    border-spacing: 13px;
+  }
+  .calendar-wrapper {
+    padding: 0;
+    width: 95%;
+  }
+  .calendar-header h1 {
+    font-size: 34px;
+  }
+  #monthAndYear {
+    margin: 0 15px;
+    font-size: 25px;
+  }
+  .tableCalendar td {
+    height: 65px;
+    font-size: 21px;
+    border-radius: 3px;
+  }
+  .CalendarDivWrapper-forTablet {
+    display: block;
+    height: 35vh;
+    background-color: black;
+  }
+  .CalendarDivWrapper-forTablet h3 {
+    color: white;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: left;
+  }
+  .calendarDiv-forTablet {
+    display: flex;
+    flex-direction: row;
+  }
+  .calendarEventsDataScience {
+    border-left: 3px solid blue;
+    margin-left: 22px;
+    height: 80px;
+    width: 50%;
+    color: white;
+  }
+  .calendarMarketing {
+    color: white;
+  }
+  .calendarEventsDataScience p,
+  .calendarMarketing p {
+    padding: 0 10px;
+    margin-bottom: 3px;
+  }
+  .calendarEventsDataScience h6,
+  .calendarMarketing h6 {
+    padding: 0 10px;
+    margin-bottom: 3px;
+  }
+  .calendarMarketing {
+    border-left: 3px solid red;
+    height: 80px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  .calendar-wrapper {
+    padding: 0px 5px;
+    width: 100%;
+  }
+  .calendar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .calendar-header h1 {
+    font-size: 27px;
+  }
+  .monthAndYear-div {
+    margin: 20px 0;
+  }
+  #monthAndYear {
+    font-size: 20px;
+  }
+  .tableCalendar {
+    padding: 0;
+    border-collapse: separate;
+  }
+  .tableCalendar th {
+    display: none;
+  }
+  .tableCalendar td {
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+    border: none;
+    width: 3px;
+    padding: 0px;
+    height: 15px;
+    line-height: 42px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .CalendarDivWrapper-forTablet {
+    height: 53vh;
+  }
+  .calendarDiv-forTablet {
+    flex-direction: column;
+    height: auto;
+  }
+  .calendarEventsDataScience {
+    width: 70%;
+  }
+  .calendarMarketing {
+    margin-left: 22px;
+    margin-top: 30px;
+    width: 70%;
+  }
+}

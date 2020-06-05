@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Brainster Space</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is my first project" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="myNav navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand logo" href="main.html">
+        <img src="./assets/img/logo.svg" />
+      </a>
+      <div class="forTablet">
+        <button
+          class="navButton-style buttonShowTablet"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи Се
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toogler">
+            <i class="fa fa-bars fa-bars"></i>
+          </span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navUl navUlflex li">
+          <li class="nav-item">
+            <a id="spaceBlog-link" class="nav-link" href="SpaceBlog.html"
+              >Space Blog<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">Настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Co-working</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="akademii.html">Академии</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventspace.html">Простор за настани</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Партнерства</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="only-for-spaceMobile"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи се
+        </button>
+        <form class="form my-2 my-lg-0">
+          <button
+            type="button"
+            class="navButton-style buttonShowForMobile"
+            data-toggle="modal"
+            data-target="#exampleModalLogIn"
+          >
+            + Приклучи се
+          </button>
+        </form>
+      </div>
+      <form class="form buttonForTablet my-2 my-lg-0">
+        <button
+          type="button"
+          class="navButton-style buttonShowForMobile"
+          data-toggle="modal"
+          data-target="#exampleModalLogIn"
+        >
+          + Приклучи се
+        </button>
+      </form>
+    </nav>
+
+    <!-- Modal -->
+
+    <div
+      class="modal fade"
+      id="exampleModalLogIn"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Приклучи се</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body myModal-body">
+            <form class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="col-md-12 mb-3 validationCustom01">
+                  <label for="">Име и презиме</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustom01"
+                    placeholder="Внеси Име и Презиме"
+                    required
+                  />
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете име и презиме
+                  </div>
+                </div>
+              </div>
+              <div class="form-row"></div>
+              <div class="form-row">
+                <div class="col-md-12 mb-3">
+                  <label for="validationCustom03">Внесете е-маил</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="validationCustom03"
+                    placeholder="Внесете е-маил"
+                    required
+                  />
+                  <div class="invalid-tooltip invalid-tooltip-position">
+                    Внесете e-maил
+                  </div>
+                </div>
+              </div>
+              <button class="navButton-style modal-button" type="submit">
+                -> Испрати форма
+              </button>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid myContainer-fluid">
+      <div class="content-wrapper">
+        <div class="sections mt-3 showEducation">
+          <div class="desc-wrapper desc-wrapper-akademii">
+            <div class="desc-width">
+              <h1 class="company-heading mb-3">Академии</h1>
+              <p>
+                Дали си подготвен да одговориш на потребите на иднината.
+                Вистинските курсеви, академии и семинари ќе ти овозможат
+                кариерна трансформација во овласта на дигитален маркетинг,
+                дизајн, програмирање и Data Science.
+              </p>
+              <br />
+            </div>
+          </div>
+          <div class="company-wrapper">
+            <div class="desc-width background-overlay">
+              <img
+                src="./assets/img/Nastani/Slika1.jpg"
+                class="img-fluid company-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-card-wrapper academy-wrapper">
+        <div class="main-card mt-3 academy-height">
+          <a
+            href="https://design.brainster.co/?gclid=Cj0KCQjwka_1BRCPARIsAMlUmErSE-TQECm_LFoEEMfZOyOrLFK0qikvAWJzXm-Mkgba3jy8G5STPa8aAumoEALw_wcB"
+            target="blank"
+          >
+            <div class="academy-card">
+              <h1>Академија за графички дизајн</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3 academy-height">
+          <a
+            href="https://marketpreneurs.brainster.co/?gclid=Cj0KCQjwka_1BRCPARIsAMlUmErWxkiI2EfjIq_4gnG6gJJviMCvz9yUJZJKJ8hudB0XCKnqPnj8MUUaAhfFEALw_wcB"
+            target="blank"
+          >
+            <div class="academy-card2">
+              <h1>Академија за дигитален маркетинг</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3 academy-height">
+          <a
+            href="https://codepreneurs.brainster.co/?gclid=Cj0KCQjwka_1BRCPARIsAMlUmErE0RxFHnL7k1hCNGlhNHelZM_FMNcZV2fmJpn3rNgr99qjuasmVskaAuYVEALw_wcB"
+            target="blank"
+          >
+            <div class="academy-card3">
+              <h1>Академија за Front-end програмирање</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3 academy-height">
+          <a
+            href="https://codepreneurs.brainster.co/?gclid=Cj0KCQjwka_1BRCPARIsAMlUmErE0RxFHnL7k1hCNGlhNHelZM_FMNcZV2fmJpn3rNgr99qjuasmVskaAuYVEALw_wcB"
+            target="blank"
+          >
+            <div class="academy-card3">
+              <h1>Академија за Full-stack програмирање</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3 academy-height">
+          <a
+            href="https://datascience.brainster.co/?gclid=Cj0KCQjwka_1BRCPARIsAMlUmEqRQphOv69teogzCPvY3nuuEzWYnTliIHtI_fFPEJ-ajLdaK1N1X8saAvTnEALw_wcB"
+            target="blank"
+          >
+            <div class="academy-card4">
+              <h1>Академија за Data-science</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="main-card mt-3 academy-height">
+          <a href="https://qa.brainster.co/" target="blank">
+            <div class="academy-card3">
+              <h1>Академија за software testing</h1>
+              <div class="academy-socials">
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Слободни места: 4</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Уписи до 09.05.2020 година</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Стани дизајнер за 6 месеца</h6>
+                </div>
+                <div class="academy-social-secondDiv">
+                  <i class="fa fa-users"></i>
+                  <h6>Партнери за вработување: 5</h6>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 
+      Socials -->
+
+      <div class="row social-wrapper">
+        <div class="social-links">
+          <ul class="ul-social">
+            <li>
+              <a href="#"><strong>Корисни линкови</strong></a>
+            </li>
+            <li>
+              <div
+                id="contact"
+                data-toggle="popover"
+                data-content="Емаил: anja@brainster.co контакт-телефон: 070 233 414"
+              >
+                Контакт
+              </div>
+            </li>
+            <li>
+              <a href="https://wearelaika.com" target="blank"
+                >Отворени позиции</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://medium.com/wearelaika/brainster-space-the-new-home-of-the-local-tech-community-in-skopje-ffe97b564152"
+                target="blank"
+                >Галерија</a
+              >
+            </li>
+            <li><a href="calendar.html">Календар</a></li>
+          </ul>
+          <div class="social-links-logos">
+            <h6><strong>Социјални мрежи</strong></h6>
+            <ul class="list-unstyled social">
+              <li>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img
+                    src="./assets/img/zanas/facebook.jpg"
+                    class="social-links-fluid"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.snapchat.com/" target="_blank"
+                  ><img
+                    src="./assets/img/zanas/linke.png"
+                    class="social-links-fluid"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/" target="_blank"
+                  ><img
+                    src="./assets/img/zanas/insta.jpg"
+                    class="social-links-fluid"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="./assets/img/logo.svg" class="logo-social" />
+      </div>
+      <footer class="row">
+        <p>Copyright&copyStudents, BrainsterSpace</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
