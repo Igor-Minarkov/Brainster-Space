@@ -4,38 +4,28 @@
     <title>Brainster Space</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="this is my first project" />
+    <meta name="description" content="Brainster Space" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <style>
-      @media all and (-ms-high-contrast:none)
-       {
-       .foo { color: green } /* IE10 */
-       *::-ms-backdrop, .foo { color: red } /* IE11 */
-       }
-    </style>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel = "stylesheet"    href = "style.css" />
+    <link rel = "stylesheet" href = "./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
-
-
     <nav class=" myNav navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand logo" href="main.html">
         <img src="./assets/img/logo.svg">
       </a>
-      <div class="forTablet">
+      <div class="nav-forTablet">
         <button class="navButton-style buttonShowTablet" data-toggle="modal" data-target="#exampleModalLogIn">+ Приклучи Се</button>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-
           <span class="navbar-toogler">   
             <i class="fa fa-bars fa-bars"></i>
           </span>
@@ -43,9 +33,9 @@
       </div>
     
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navUl navUlflex li">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navUl navUlflex">
           <li class="nav-item">
-            <a  id="spaceBlog-link"  class="nav-link" href="SpaceBlog.html">Space Blog<span class="sr-only">(current)</span></a>
+            <a  id="spaceBlog-link"  class="nav-link" href="spaceblog.html">Space Blog<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="calendar.html">Настани</a>
@@ -54,7 +44,7 @@
             <a class="nav-link" href="#">Co-working</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="akademii.html">Академии</a>
+            <a class="nav-link" href="akademies.html">Академии</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="eventspace.html">Простор за настани</a>
@@ -79,7 +69,7 @@
 
     <!-- Modal -->
 <!-- 
-    Modal for приклучи се button -->
+    Modal for „приклучи се“ button -->
 
     
     <div class="modal fade" id="exampleModalLogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -116,8 +106,7 @@
               <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
             </form>
           </div>
-          <div class="modal-footer">
-          </div>
+          <div class="modal-footer"></div>
         </div>
       </div>
     </div>
@@ -160,9 +149,9 @@
                 </div>
               </div>
               <div class="form-row">
-                <div class="col-md-12 mb-3 validationCustom01">
+                <div class="col-md-12 mb-3 validationCustom04">
                   <label for="">Предлог за соработка(незадолжително)</label>
-                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom01" placeholder="Во 300 карактери, објаснете зошто сакате да соработуваме" required>
+                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom04" placeholder="Во 300 карактери, објаснете зошто сакате да соработуваме" required>
                 </div>
               </div>
               <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
@@ -214,17 +203,17 @@
               </div>
               <div class="form-row">
                 <div class="col-md-12 mb-3">
-                  <label for="validationCustom03">Телефонски број</label>
-                  <input type="number" class="form-control" id="validationCustom03" placeholder="Внесете телефонски број">
+                  <label for="validationCustom04">Телефонски број</label>
+                  <input type="number" class="form-control" id="validationCustom04" placeholder="Внесете телефонски број">
                   <div class="invalid-tooltip invalid-tooltip-position">
                     Внесете телефонски број
                   </div>
                 </div>
               </div>
               <div class="form-row">
-                <div class="col-md-12 mb-3 validationCustom01">
+                <div class="col-md-12 mb-3 validationCustom05">
                   <label for="">Потреби на компанијата</label>
-                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom01" placeholder="Ве молам, на кратко објаснете ги потребите на компанијата" required>
+                  <input type="text" maxlength = "300" class="form-control form-height" id="validationCustom05" placeholder="Ве молам, на кратко објаснете ги потребите на компанијата" required>
                 </div>
               </div>
               <button class="navButton-style modal-button" type="submit">-> Испрати форма</button>
@@ -409,10 +398,10 @@
             <br />
             <div class="company-buttons">
               <a href="#EducationLink">
-              <button class="reverse-NavButton-style button-Akademii">Академии</button>
+              <button class="reverse-NavButton-style button-academies">Академии</button>
               </a>
               <a href="#CompanyLink">
-              <button class="navButton-style button-style-1 button-zaKompanii">
+              <button class="navButton-style button-style-1 button-companies">
                 За компании
               </button>
               </a>
@@ -442,10 +431,10 @@
             <br />
             <div class="company-buttons">
               <a href="#EducationLink">
-              <button class="reverse-NavButton-style button-Akademii">Академии</button>
+              <button class="reverse-NavButton-style button-academies">Академии</button>
               </a>
               <a href="#CompanyLink">
-              <button class="navButton-style button-style-1 button-zaKompanii">
+              <button class="navButton-style button-style-1 button-companies">
                 За компании
               </button>
               </a>
@@ -585,7 +574,7 @@
 
       <div class="row mt-3">
         <div class="desc-wrapper">
-          <div class="desc-width desc-width-nastani">
+          <div class="desc-width desc-width-events">
             <a href="eventspace.html">
             <h1 class="company-heading mb-3">Простор за настани</h1>
             </a>

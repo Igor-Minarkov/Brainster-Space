@@ -34,14 +34,14 @@ $("#myModal").on("shown.bs.modal", function () {
 
 $(function () {
   $(".showCompanies").hide();
-  $(".button-zaKompanii").on({
+  $(".button-companies").on({
     click: function () {
       $(".showCompanies").show();
       $(".showEducation").hide();
     },
   });
 
-  $(".button-Akademii").on({
+  $(".button-academies").on({
     click: function () {
       $(".showEducation").show();
       $(".showCompanies").hide();
@@ -64,9 +64,9 @@ $(function () {
       $(".navUl-for-tablet-static").hide();
     } else {
       $(".navUl-for-tablet-static").toggle();
-      $('secondNavUl li').on('click', function(){
-        console.log('clicked');
-      })
+      $("secondNavUl li").on("click", function () {
+        console.log("clicked");
+      });
     }
   });
 });
